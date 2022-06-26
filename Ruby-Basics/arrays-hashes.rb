@@ -5,9 +5,12 @@
 a = [1, 'cat', 3.14, true, {}]  # array of 5 elements
 a[0] # access the first element which is 1
 a[2] = nil # set the third element to be nil
+a.each do |item|
+    puts item
+end
 # creating an array of words
-a = %W{ ant bee cat dog elk}
-print a
+b = %W{ ant bee cat dog elk}
+print b
 
 # Hashes
 
@@ -17,5 +20,9 @@ frstHash = {
     'drum' => 'percussion',
     'oboe' => 'woodwind'
 }
-frstHash['oboe'] # accesses woodwind
-frsthash['cello'] # access string
+
+puts frstHash['oboe'] # accesses woodwind
+puts frstHash['cello'] # access string
+frstHash.each do |key, value|
+    print key, " is ", value, "\n"
+end
